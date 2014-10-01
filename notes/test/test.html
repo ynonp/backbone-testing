@@ -14,7 +14,7 @@
 
     <!-- JavaScript Test Libraries. -->
     <script src="js/lib/mocha.js"></script>
-    <script src="js/lib/chai.js"></script>
+		<script src="js/lib/chai.js"></script>
     <script src="js/lib/sinon-chai.js"></script>
     <script src="js/lib/sinon.js"></script>
 
@@ -48,9 +48,12 @@
     <script src="../app/js/app/views/notes.js"></script>
     <script src="../app/js/app/routers/router.js"></script>
 
+
     <!-- Set up Mocha and Chai -->
     <script>
-      var expect = chai.expect;
+			var expect = chai.expect;
+			chai.should();
+
       mocha.setup({
         ui: "bdd",
         bail: false
@@ -64,5 +67,6 @@
     <!-- Include our specs. -->
 		<!-- <script src="js/spec/views/notes-filter.spec.js"></script> -->
 		<script src="js/spec/collections/notes.spec.js"></script>
+		<script src="js/spec/views/notes-filter.spec.js"></script>
   </body>
 </html>
