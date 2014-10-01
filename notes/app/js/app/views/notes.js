@@ -71,7 +71,7 @@
       this.$("#notes-list tr.notes-item").remove();
 
       // Add all notes from collection, sorted old to new.
-      this.collection.chain()
+      this.collection.forDisplay.chain()
         .sortBy(function (m) { return m.get("createdAt"); })
         .each(this.addNote, this);
     },
